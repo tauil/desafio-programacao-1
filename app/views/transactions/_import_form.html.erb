@@ -1,0 +1,4 @@
+<%= form_for @dump, :url => import_path, :html => { :multipart => true } do |form| %>
+  <%= form.file_field :dumpfile %>
+  <%= form.submit 'Enviar' %>
+<% end %>
