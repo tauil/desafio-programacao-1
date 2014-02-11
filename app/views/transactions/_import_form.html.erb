@@ -1,4 +1,9 @@
-<%= form_for @dump, :url => import_path, :html => { :multipart => true } do |form| %>
-  <%= form.file_field :dumpfile %>
-  <%= form.submit 'Enviar' %>
+<%= form_for @dump, :url => import_path, :html => { :multipart => true, :class => 'form-horizontal' } do |form| %>
+  <div class="form-group">
+    <%= form.label :dumpfile, t(:choose_dump_file), class: 'col-sm-2 control-label' %>
+    <div class="col-sm-5">
+      <%= form.file_field :dumpfile, class: 'form-control' %>
+    </div>
+  </div>
+  <%= form.submit t(:send), class: 'btn btn-success' %>
 <% end %>

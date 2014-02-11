@@ -1,24 +1,23 @@
-<h1>Transactions</h1>
-
-<%= render 'import_form' %>
+<h1><%= t(:transactions_index) %></h1>
 
 <% if @transactions.present? %>
-<table width="100%" border="0">
+<table class="table">
   <thead>
     <tr>
-      <% @transactions.first.attributes.keys.each do |attribute| %>
-      <td><%= attribute.capitalize %></td>
+      <% @transactions.first.attributes.keys.reject{|k| k.eql?('id') || k.eql?('created_at') || k.eql?('updated_at')}.each do |attribute| %>
+      <td><%= t attribute.to_sym %></td>
       <% end %>
     </tr>
   </thead>
   <% @transactions.each do |transaction| %>
   <tr>
-    <% transaction.attributes.keys.each do |attribute| %>
+    <% transaction.attributes.keys.reject{|k| k.eql?('id') || k.eql?('created_at') || k.eql?('updated_at')}.each do |attribute| %>
     <td><%= transaction.send attribute.to_sym %></td>
     <% end %>
   </tr>
   <% end %>
 </table>
 <% else %>
-Nenhuma transação feita até o momento.
+<%= render 'import_form' %>
+<p class="text-muted"><%= t(:no_transactions) %></p>
 <% end %>

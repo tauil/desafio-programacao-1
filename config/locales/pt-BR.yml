@@ -1,0 +1,12 @@
+# -*- coding: utf-8 -*-
+pt-BR:
+  transactions_index: 'Lista de transações'
+  no_transactions: 'Nenhuma transação feita até o momento.'
+  choose_dump_file: 'Escolha o arquivo à ser importado'
+  send: 'Enviar'
+  purchaser_name: 'Nome do comprador'
+  item_description: 'Descrição do item'
+  item_price: 'Preço do item'
+  purchase_count: 'Número de compras'
+  merchant_address: 'Endereço do comerciante'
+  merchant_name: 'Nome do comerciante'
