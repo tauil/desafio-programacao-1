@@ -1,5 +1,8 @@
 <h1><%= t(:transactions_index) %></h1>
 
+<%= content_tag :p, notice, class: 'text-success' %>
+<%= content_tag :p, alert, class: 'text-danger' %>
+
 <% if @transactions.present? %>
 <table class="table">
   <thead>

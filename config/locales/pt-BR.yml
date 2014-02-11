@@ -10,3 +10,8 @@ pt-BR:
   purchase_count: 'Número de compras'
   merchant_address: 'Endereço do comerciante'
   merchant_name: 'Nome do comerciante'
+  hi_user: "Olá, %{user}"
+  sign_in_text: 'Para acessar o sistema é necessário estar autenticado.'
+  sign_out: 'Sair'
+  file_imported_successfully: 'Arquivo importado com sucesso'
+  import_failed: 'Falha ao importar arquivo.'

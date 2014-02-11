@@ -28,6 +28,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem "paperclip", "~> 3.0"
+gem "omniauth-github", "~> 1.1.1"
 
 group :development, :test do
   gem 'rspec-rails'

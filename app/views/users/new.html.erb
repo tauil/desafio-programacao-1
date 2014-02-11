@@ -1,0 +1,4 @@
+<% unless current_user.present? %>
+  <p class="text-muted"><%= t(:sign_in_text) %></p>
+  <%= link_to "Sign in with Github", "/auth/github", id: "sign_in_with_github" %>
+<% end %>

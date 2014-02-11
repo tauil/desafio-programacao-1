@@ -9,6 +9,10 @@
 <body>
 
   <div class="container">
+    <% if current_user.present? %>
+      <p id="login-text"><%= t(:hi_user, user: current_user.name) %> | <%= link_to t(:sign_out), signout_path %></p>
+    <% end %>
+
     <%= yield %>
   </div>
 

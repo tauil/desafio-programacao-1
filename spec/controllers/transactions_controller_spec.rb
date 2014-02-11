@@ -2,7 +2,8 @@ require 'spec_helper'
 
 describe TransactionsController do
 
-  before(:all) do
+  before do
+    session[:user_id] = FactoryGirl.create(:user).id
     @transaction = FactoryGirl.create(:transaction)
   end
 
